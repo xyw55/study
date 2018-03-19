@@ -10,9 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>design_pattern</module>
-        <module>mybatis_generator</module>
         <module>algs</module>
         <module>jvmDemo</module>
+        <module>java_eight</module>
+        <module>tricks</module>
     </modules>
 
     <dependencies>
