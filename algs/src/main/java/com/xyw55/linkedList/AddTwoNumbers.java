@@ -141,7 +141,7 @@ public class AddTwoNumbers {
 
     public static void main(String[] args) {
         AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
-        addTwoNumbers.addTwoNumbers2(ListNode.createLIstNodes(new int[]{ 1}),
-                ListNode.createLIstNodes(new int[]{9,9,9,9}));
+        addTwoNumbers.addTwoNumbers2(ListNode.createListNodes(new int[]{ 1}),
+                ListNode.createListNodes(new int[]{9,9,9,9}));
     }
 }

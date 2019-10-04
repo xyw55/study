@@ -72,7 +72,7 @@ public class IntersectionOfTwoLinkedLists {
 
     public static void main(String[] args) {
         IntersectionOfTwoLinkedLists intersectionOfTwoLinkedLists = new IntersectionOfTwoLinkedLists();
-        intersectionOfTwoLinkedLists.getIntersectionNode(ListNode.createLIstNodes(new int[]{1}),
-                ListNode.createLIstNodes(new int[]{}));
+        intersectionOfTwoLinkedLists.getIntersectionNode(ListNode.createListNodes(new int[]{1}),
+                ListNode.createListNodes(new int[]{}));
     }
 }

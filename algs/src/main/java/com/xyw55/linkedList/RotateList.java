@@ -36,6 +36,6 @@ public class RotateList {
 
     public static void main(String[] args) {
         RotateList rotateList = new RotateList();
-        rotateList.rotateRight(ListNode.createLIstNodes(new int[]{1, 2}), 0);
+        rotateList.rotateRight(ListNode.createListNodes(new int[]{1, 2}), 0);
     }
 }

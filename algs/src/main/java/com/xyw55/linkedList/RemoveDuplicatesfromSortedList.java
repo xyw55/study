@@ -41,6 +41,6 @@ public class RemoveDuplicatesfromSortedList {
 
     public static void main(String[] args) {
         RemoveDuplicatesfromSortedList removeDuplicatesfromSortedList = new RemoveDuplicatesfromSortedList();
-        removeDuplicatesfromSortedList.deleteDuplicates(ListNode.createLIstNodes(new int[]{3, 5}));
+        removeDuplicatesfromSortedList.deleteDuplicates(ListNode.createListNodes(new int[]{3, 5}));
     }
 }

@@ -8,7 +8,7 @@ public class ListNode {
     ListNode next;
     ListNode(int x) { val = x; }
 
-    public static ListNode createLIstNodes(int[] numbers) {
+    public static ListNode createListNodes(int[] numbers) {
         ListNode head = null;
         ListNode curr = null;
         for (int i=0; i < numbers.length; i++){

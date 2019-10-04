@@ -29,6 +29,6 @@ public class ReverseLinkedList {
 
     public static void main(String[] args) {
         ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
-        reverseLinkedList.reverseBetween(ListNode.createLIstNodes(new int[]{3, 5}), 1, 2);
+        reverseLinkedList.reverseBetween(ListNode.createListNodes(new int[]{3, 5}), 1, 2);
     }
 }

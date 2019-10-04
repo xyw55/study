@@ -42,7 +42,7 @@ public class PalindromeLinkedList {
 
     public static void main(String[] args) {
         PalindromeLinkedList palindromeLinkedList = new PalindromeLinkedList();
-        palindromeLinkedList.isPalindrome(ListNode.createLIstNodes(new int[]{1, 2}));
+        palindromeLinkedList.isPalindrome(ListNode.createListNodes(new int[]{1, 2}));
     }
 
 

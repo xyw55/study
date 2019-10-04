@@ -132,7 +132,7 @@ public class SortList148 {
 
     public static void main(String[] args) {
         SortList148 sortList148 = new SortList148();
-//        sortList148.mergeSortList(com.xyw55.linkedList.ListNode.createLIstNodes(new int[]{3,2,4}));
-        sortList148.insertionSortList(ListNode.createLIstNodes(new int[]{1,1}));
+//        sortList148.mergeSortList(com.xyw55.linkedList.ListNode.createListNodes(new int[]{3,2,4}));
+        sortList148.insertionSortList(ListNode.createListNodes(new int[]{1,1}));
     }
 }

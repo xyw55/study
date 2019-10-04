@@ -92,6 +92,6 @@ public class ReorderList {
 
     public static void main(String[] args) {
         ReorderList reorderList = new ReorderList();
-        reorderList.reorderList2(ListNode.createLIstNodes(new int[]{1,2,3}));
+        reorderList.reorderList2(ListNode.createListNodes(new int[]{1,2,3}));
     }
 }
