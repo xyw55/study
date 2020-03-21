@@ -1,10 +1,10 @@
 /*
- * @(#) LongestSubstring.java 2019-09-08
+ * @(#) LongestSubstringWithoutRepeatingChar.java 2019-09-08
  *
  * Copyright 2019 NetEase.com, Inc. All rights reserved.
  */
 
-package com.xyw55.string;
+package com.xyw55.slidingwindow;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,7 +18,7 @@ import java.util.List;
  * @author xyw55
  * @version 2019-09-08
  */
-public class LongestSubstring {
+public class LongestSubstringWithoutRepeatingChar {
 
     /**
      * 常规暴力解法
@@ -80,12 +80,12 @@ public class LongestSubstring {
     }
 
     public static void main(String[] args) {
-        LongestSubstring longestSubstring = new LongestSubstring();
-        System.out.println(longestSubstring.lengthOfLongestSubstring2("abcabcbb"));
-        System.out.println(longestSubstring.lengthOfLongestSubstring2("bbbbb"));
-        System.out.println(longestSubstring.lengthOfLongestSubstring2("pwwkew"));
-        System.out.println(longestSubstring.lengthOfLongestSubstring2("au"));
-        System.out.println(longestSubstring.lengthOfLongestSubstring2("aab"));
-        System.out.println(longestSubstring.lengthOfLongestSubstring2("dvdf"));
+        LongestSubstringWithoutRepeatingChar longestSubstringWithoutRepeatingChar = new LongestSubstringWithoutRepeatingChar();
+        System.out.println(longestSubstringWithoutRepeatingChar.lengthOfLongestSubstring2("abcabcbb"));
+        System.out.println(longestSubstringWithoutRepeatingChar.lengthOfLongestSubstring2("bbbbb"));
+        System.out.println(longestSubstringWithoutRepeatingChar.lengthOfLongestSubstring2("pwwkew"));
+        System.out.println(longestSubstringWithoutRepeatingChar.lengthOfLongestSubstring2("au"));
+        System.out.println(longestSubstringWithoutRepeatingChar.lengthOfLongestSubstring2("aab"));
+        System.out.println(longestSubstringWithoutRepeatingChar.lengthOfLongestSubstring2("dvdf"));
     }
 }
