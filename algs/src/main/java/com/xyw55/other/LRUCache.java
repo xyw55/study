@@ -23,9 +23,9 @@ import java.util.HashMap;
  * @author xyw55
  * @version 2019-09-01
  */
-public class LRUCache {
+public class LRUCache <T> {
 
-    private HashMap<Integer, Node> cache;
+    private HashMap<String, Node> cache;
 
     // head id old，tail is new
     private Node head = null;
@@ -43,31 +43,31 @@ public class LRUCache {
     public LRUCache(int capacity) {
         this.cache = new HashMap<>(capacity + 1, 1);
         this.capacity = capacity;
-        head = new Node("-1", "-1", null, null);
-        tail = new Node("-1", "-1", head, null);
+        head = new Node("", null, null, null);
+        tail = new Node("", null, head, null);
         head.next = tail;
     }
 
-    public int get(int key) {
+    public T get(String key) {
         // 1.get value
         Node result = cache.get(key);
         if (result == null) {
-            return -1;
+            return null;
         }
         // 2.refresh
         refresh(key);
-        return Integer.parseInt(result.value);
+        return (T) result.value;
     }
 
-    public void put(int key, int value) {
+    public void put(String key, T value) {
         // 1.set value
         Node result = cache.get(key);
         if (result == null) {
             //add
-            this.cache.put(key, new Node(String.valueOf(key), String.valueOf(value), null, null));
+            this.cache.put(key, new Node(key, value, null, null));
         } else {
             //update
-            result.value = String.valueOf(value);
+            result.value = value;
         }
         // 2.judge cache is full, if it's full, delete head
         if (cache.size() > capacity) {
@@ -76,13 +76,13 @@ public class LRUCache {
             old.next.prev = head;
             old.next = null;
             old.prev = null;
-            this.cache.remove(Integer.parseInt(old.key));
+            this.cache.remove(old.key);
         }
         // 3.refresh order
         refresh(key);
     }
 
-    private void refresh(int key) {
+    private void refresh(String key) {
         // 1.get value
         Node e = cache.get(key);
         if (e == null) {
@@ -107,13 +107,13 @@ public class LRUCache {
 
     }
 
-    class Node {
+    class Node <T> {
         private String key;
-        private String value;
+        private T value;
         private Node prev;
         private Node next;
 
-        Node(String key, String value, Node prev, Node next) {
+        Node(String key, T value, Node prev, Node next) {
             this.key = key;
             this.value = value;
             this.prev = prev;
@@ -125,22 +125,22 @@ public class LRUCache {
         LRUCache cache = new LRUCache(2 /* capacity */);
         try {
 
-//            cache.put(1, 1);
-//            cache.put(2, 2);
-//            System.out.println(cache.get(1));       // returns 1
-//            cache.put(3, 3);    // evicts key 2
-//            System.out.println(cache.get(2));       // returns -1 (not found)
-//            cache.put(4, 4);    // evicts key 1
-//            System.out.println(cache.get(1));       // returns -1 (not found)
-//            System.out.println(cache.get(3));       // returns 3
-//            System.out.println(cache.get(4));       // returns 4
+            cache.put("1", 1);
+            cache.put("2", 2);
+            System.out.println(cache.get("1"));       // returns 1
+            cache.put("3", 3);    // evicts key 2
+            System.out.println(cache.get("2"));       // returns -1 (not found)
+            cache.put("4", 4);    // evicts key 1
+            System.out.println(cache.get("1"));       // returns -1 (not found)
+            System.out.println(cache.get("3"));       // returns 3
+            System.out.println(cache.get("4"));       // returns 4
 
-            cache.put(2,1);
-            cache.put(1,1);
-            cache.put(2,3);
-            cache.put(4,1);
-            System.out.println(cache.get(1));
-            System.out.println(cache.get(2));
+            cache.put("2",1);
+            cache.put("1",1);
+            cache.put("2",3);
+            cache.put("4",1);
+            System.out.println(cache.get("1"));
+            System.out.println(cache.get("2"));
         } catch (Exception e) {
             e.printStackTrace();
             System.out.println(cache);
